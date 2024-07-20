@@ -28,6 +28,8 @@ if the object already present then we throw Exception.
 
 ------------------------------------------------------
 
+You might be thinking of not making the class implementing the Serializable and Cloneable interface but there can be cases, where not your class but the class you are extending can implement these interfaces, so in that case your class will indirectly implement Cloneable and Serializable interface, so you need to take care of not breaking the situation.
+
 What is serialVersionUID, why it is important to add in a Serilizable class.
 It is important to declare a serialVersionId for he serializable class, if we don't specify the serialVersionId by manually then 
 JVM will generate a serialVersionUID automatically at compile time. This generated value is based on the class's structure,
